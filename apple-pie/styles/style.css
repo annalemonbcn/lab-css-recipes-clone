@@ -1,0 +1,76 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap');
+
+/* GENERIC */
+body{
+    font-family: 'Inter';
+    padding-bottom: 70px;
+    font-size: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* START */
+div.section{
+    width: 60vw;
+    margin: auto;
+    padding: 50px 0 20px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+div.section.mt{
+    border-top: 3px solid lightgrey;
+}
+div.section h2{
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+div.section img{
+    width: 50%;
+    margin: 30px auto 0;
+}
+div.section ul, .section ol{
+    list-style: none;
+    padding-left: 20px;
+}
+
+/* BANNER */
+#banner{
+    background-image: url("/images/apple-pie.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    align-items: center;
+}
+#banner h1{
+    color: white;
+    font-size: 64px;
+    font-weight: 400;
+}
+
+/* SECTION: description */
+.section#description{
+    align-items: center;
+    padding-top: 70px;
+}
+
+/* SECTION: ingredients */
+.section#ingredients ul > li:before {
+    content: "-";
+    padding-right: 5px;
+}
+
+/* SECTION: directions */
+.section#directions ol > li{
+    counter-increment: listcounter;
+}
+.section#directions ol > li::before{
+    content: counter(listcounter) ") ";
+}
